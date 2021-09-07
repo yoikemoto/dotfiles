@@ -1,0 +1,45 @@
+[username]
+style_user = "yellow bold"
+style_root = "white bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vicmd_symbol = "[<](bold green)"
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+
+[git_branch]
+symbol = "🌱 "
+style = "bold green"
+
+[time]
+disabled = false
+format = '[🕙 $time]($style) '
+time_format = "%T"
+
+[aws]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[golang]
+disabled = true
+
+[elixir]
+disabled = true
+
+[python]
+disabled = true
+
+[package]
+disabled = true
