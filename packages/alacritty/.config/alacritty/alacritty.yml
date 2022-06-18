@@ -9,3 +9,5 @@ font:
       family: FiraCode Nerd Font
       style: Italic
   size: 13.0
+env:
+  TERM: xterm-256color
