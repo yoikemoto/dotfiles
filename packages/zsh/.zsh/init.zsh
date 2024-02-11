@@ -1,8 +1,13 @@
-# for f in ~/*.zsh; source $f done;
-# なんかtmuxのバックスペース効かないから入れてる
-# see: https://github.com/tmux/tmux/issues/597
-TERM=xterm
+# TODO: 暫定対応 rbenvの指定バージョンを反映させている
+eval "$(rbenv init - zsh)"
 
-# starshipプロンプトの起動
-# TODO: 実行順番の関係か、反映されないのでzshrcに直書きしている
-# eval "$(starship init zsh)"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# envrc(go開発にdirenv使ってるため）
+# eval "$(direnv hook zsh)" (動かなかったらコメントイン)
+
+# bun completions (動かなかったらコメントイン)
+# [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
