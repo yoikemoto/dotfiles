@@ -34,11 +34,3 @@ function peco-cdr() {
 }
 zle -N peco-cdr
 bindkey '^u' peco-cdr
-
-
-# ブランチを簡単切り替え。
-# ex: git checkout lb
-alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
-
-# dockerコンテナに入る
-alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'

@@ -1,9 +1,9 @@
 # Linux
 alias la='ls -a'
-
-
-# TODO: 実はbash_profileとbashrcにもエイリアスが書いてあるから、整理しよう
-
+# WARN: NERD系のフォントをターミナル側で設定しないと、アイコンが文字化けするので注意
+# ※ Hack Nerd Fontを使用している
+alias ls='eza --icons --git -al'
+alias grep='rg'
 # git
 alias g='git'
 alias gti='git'
@@ -25,11 +25,8 @@ alias be='bundle exec'
 # Docker
 alias dc='docker-compose'
 
-# tmux
-alias tm='tmux'
-
-# exa
-alias ls='exa --icons'
-
-# ripgrep
-alias grep='rg'
+# peco系
+## ブランチを簡単切り替え。 ex: git checkout lb
+alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+## dockerコンテナに入る
+alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
